@@ -16,4 +16,4 @@ the tests in this lab:
 
 **Note:** This lab uses some packages that need a relatively new version of
 node. If you've got [nvm][https://github.com/creationix/nvm], run
-`nvm install node` to update.
+`npm install node` to update.
