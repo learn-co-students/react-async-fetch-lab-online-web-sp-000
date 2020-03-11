@@ -2,33 +2,27 @@
 import React, { Component } from 'react'
 
 class App extends Component {
-  constructor() {
-    super()
-    this.state = {
-      peopleInSpace: []
-    }
+
+  state = {
+    spacePeople: []
   }
-  // state = {
-  //   peopleInSpace: []
-  // }
 
   componentDidMount() {
     fetch('http://api.open-notify.org/astros.json')
       .then(response => response.json())
-      .then(data => {
+      .then(data => 
         this.setState({
-          peopleInSpace: data.people
-        })
-      })
+          spacePeople: data.people
+        }))
   }
 
   render() {
-    return (
+    return(
       <div>
-        {this.state.peopleInSpace.map(person => person.name)}
+        {this.state.spacePeople.map((people, id) => <li key={id}>{people.name}</li>)}
       </div>
     )
   }
 }
 
-export default App
+export default App;
