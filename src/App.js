@@ -2,11 +2,15 @@
 import React, {Component} from 'react';
 
 export default class App extends Component {
+  // constructor () {
+  //   currentAstronauts = []
+  // }
 
   componentDidMount() {
     fetch('http://api.open-notify.org/astros.json')
-    .then(response => response.json())
-    .then(jsonizedResponse => console.log(jsonizedResponse))
+    // .then(response => response.json())
+    // .then(jsonizedResponse => this.currentAstronauts = jsonizedResponse)
+    // .then (console.log(this.currentAstronauts))
   }
 
   render() {
