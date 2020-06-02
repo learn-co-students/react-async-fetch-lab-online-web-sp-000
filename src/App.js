@@ -20,7 +20,7 @@ componentDidMount(){
 
 render(){
   return(
-    <div>{this.state.people.map(person=> person.name)}</div>
+    <div>{this.state.people.map(person=> <div> {person.name} </div>)}</div>
   )
 }
 
