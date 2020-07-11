@@ -8,4 +8,9 @@ export default class App extends React.Component {
             .then(json => console.log(json))
     }
 
+    render(){
+        return(
+            <div></div>
+        )
+    }
 }
