@@ -6,14 +6,22 @@ class App extends Component {
     super();
   }
 
+  state = {
+    peopleInSpace: []
+  }
+
   componentDidMount() {
     fetch('http://api.open-notify.org/astros.json')
       .then(res => res.json())
-      .then(data => console.log(data))
+      .then(({people}) => this.setState({ peopleInSpace: people }))
   }
 
   render() {
-    return <h1>Success</h1>
+    return(
+    <div>
+      {this.state.peopleInSpace.map((person, id) => <h1 key={id}>{person.name}</h1>)}
+    </div>
+    )
   }
 }
 
