@@ -1,13 +1,13 @@
 // create your App component here
-import React, {Component} from "react";
+import React from "react";
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return "hello"
   }
 
   componentDidMount() {
-    fetch('http://api.open-notify.org/astros.json').then(resp => resp.json()).then(data => console.log(data))
+    fetch('http://api.open-notify.org/astros.json').then(resp => resp.json()).then(data => data.people.map(astro => console.log(astro.name)))
   }
 }
 
