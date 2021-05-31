@@ -17,9 +17,7 @@ export default class App extends Component {
     }
 
     getPeople = () => {
-        let i = 0;
         return this.state.people.map(e => {
-            i++;
             return <li key={i}>{e.name}</li>
         })
     }
