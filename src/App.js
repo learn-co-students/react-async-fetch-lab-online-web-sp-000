@@ -18,7 +18,8 @@ export default class App extends Component {
 
     getPeople = () => {
         return this.state.people.map(e => {
-            return <li key={i}>{e.name}</li>
+            const id = `astro-${this.state.people.indexOf(e)}`
+            return <li id={id} key={id}>{e.name}</li>
         })
     }
 
